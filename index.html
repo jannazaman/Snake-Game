@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the language of the content to English -->
+    <meta charset="UTF-8" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Optimizing the page's display (different screen sizes) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>SNAKE GAME JS</title>
+    
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Container element for the game -->
+    <div class="container">
+      <!-- The canvas element for drawing the game -->
+      <canvas width="400" height="400" id="cvs"></canvas>
+      <div class="score"></div>
+      <div class="high-score"></div>
+
+      <!-- Element for the game over screen (initially hidden) -->
+      <div class="game-over hide">
+        <div class="message">Game Over!</div>
+        <div class="game-over-score">
+          <div class="current"></div>
+          <div class="high"></div>
+        </div>
+        <!-- Option to play the game again -->
+        <div class="play-again">Play Again!</div>
+      </div>
+    </div>
+    <script src="./game.js"></script>
+  </body>
+</html>

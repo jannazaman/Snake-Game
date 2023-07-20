@@ -1,0 +1,153 @@
+:root {
+   /* CSS variables for font sizes */
+  --font-size: 2rem;
+  --game-over-msg-font: 3rem;
+  --game-over-score-msg-font: 2rem;
+  --game-over-score-padding: 1.5rem;
+  --btn-font-size: 1.5rem;
+}
+
+* {
+  /* Resetting padding, margin, and box-sizing 
+  to create a clean starting point for styling */
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  /* Styling for the body */
+  height: 100vh;
+  max-height: 100vh; /* Set a maximum height to prevent overflow */
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* Wrapper for the game content, providing a defined space with dimensions and positioning guidelines. 
+  It helps in creating a well-structured & organized layout for the game elements to reside in. */
+  width: 400px;
+  height: 450px;
+
+  position: relative;
+}
+
+#cvs {
+  /* Styling for the canvas */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.score {
+  /* It positions the element absolutely at the top-left corner 
+  of its positioned parent. */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-size: var(--font-size);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+
+.high-score {
+  /* Styling for the high score element,
+  positions the element absolutely at the top-right corner */
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  font-size: var(--font-size);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+
+.game-over {
+  /* Styling for the game over screen */
+
+  width: 100%;
+  height: 100%;
+
+  /* Top-left corner and stretches it horizontally */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /* Set the background color with transparency */
+  background-color: rgba(0, 0, 0, 0.85);
+
+  /* Use flexbox to center the content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  /* Set the font size using a CSS variable */
+  font-size: var(--game-over-msg-font);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Add a border */
+  border: 1px solid rgb(33, 33, 33);
+}
+
+.message {
+  /* Styling for the game over message */
+  font-weight: bolder;
+}
+
+.game-over-score {
+  /* Styling for the game over score section */
+  width: 100%;
+  display: flex;
+
+  /* Wrap to the next line if needed */
+  flex-wrap: wrap; 
+
+  justify-content: space-around;
+
+  /* Set the padding on the top and bottom */
+  padding: var(--game-over-score-padding) 0; 
+
+  font-size: var(--game-over-score-msg-font);
+}
+
+.play-again {
+  background-color: rgb(17, 170, 25);
+  color: rgb(201, 255, 203);
+  
+  /* Padding on the top and bottom of the button & on the left and right sides */
+  padding: 1rem 1.5rem; 
+  
+  /* Add a margin above the button */
+  margin-top: 1rem; 
+
+  /* Set the font size for the button using a CSS variable */
+  font-size: var(--btn-font-size);
+
+  /* Set the border radius to give the button rounded corners */
+  border-radius: 0.75rem;
+
+  /* Add a smooth transition effect to the button when its properties change */
+  transition: all 300ms ease-in-out;
+
+  /* Set the cursor style to indicate it is clickable */
+  cursor: pointer;
+}
+
+.play-again:hover {
+  padding: 1rem 2rem; /* Increase the padding on the left and right sides of the button */
+  background-color: rgb(23, 214, 33);
+  color: rgb(254, 254, 254);
+}
+
+.hide {
+  /* Utility class to hide an element */
+  visibility: hidden; /* Set the visibility of the element to hidden */
+}
