@@ -1,5 +1,5 @@
 # Snake-Game
-![Game ](GameImage/snake-game.jpg)
+![Game ](snake-game.jpg)
 
 
 ### Description 
