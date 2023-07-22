@@ -12,4 +12,6 @@ This game is a classic single-player Snake Game, which was built using HTML, CSS
 - Every time the snake consumes food, it will grow longer making the score increase.
 - The game will come to an end when the snake hits the boundary or collides with itself.
 
+### Play the Snake Game here:
+[https://master-snake-game.netlify.app/](https://master-snake-game.netlify.app/)
 
